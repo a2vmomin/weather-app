@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import WeatherForm from './components/WeatherForm';
 import WeatherCard from './components/WeatherCard';
 
-const API_KEY = 'ac02dbe7b3b2846c3d10c89c41da53dd';
-const API_URL = `http://api.openweathermap.org/data/2.5/weather?&appid=${API_KEY}`;
+const API_URL = `https://api.openweathermap.org/data/2.5/weather?&appid=${process.env.REACT_APP_WEATHER_API_KEY}`;
 
 function App() {
   const [cod, setCod] = useState();
